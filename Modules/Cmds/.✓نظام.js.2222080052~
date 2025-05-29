@@ -1,0 +1,34 @@
+module.exports.Nero =  { 
+  name: "نظام",
+  Role: 3,
+  credits: "𝐘-𝐀𝐍𝐁𝐔",
+  Class: "المطور",
+  description: "ايقاف وتشغيل البوت",
+  Rest: 0
+},
+    
+module.exports.Begin = async ({ api, event, args }) => {
+    if (!args[0] || !["تشغيل", "ايقاف"].includes(args[0])) {
+        return api.sendMessage(
+            "يرجى تحديد قيمة صالحة: 'تشغيل' أو 'إيقاف'.",
+            event.threadID,
+            event.messageID,
+        );
+    }
+    const permission = ["61557506697779"];
+    if (!permission.includes(event.senderID)) {
+        return api.sendMessage(
+            "لا تمتلك الصلاحية الكافية لاستخدام هذا الأمر.",
+            event.threadID,
+            event.messageID,
+        );
+    }
+    
+    const AdminOnly = args[0] === "تشغيل" ? "false" : "true";
+    global.Settings.AdminOnly = AdminOnly;
+    const message =
+        args[0] === "تشغيل"
+            ? "✅| تـم تـشـغـيل الـنـظـام"
+            : "❌| تـم ايـقـاف تـشـغـيـل الـنـظـام";
+    return api.sendMessage(message, event.threadID, event.messageID);
+};

@@ -1,0 +1,47 @@
+{
+    "Lang": "En",
+    "MAD": ["value2"],
+    "TimeZone": "Africa/Cairo",
+    "AdminOnly": false,
+    "GcAdminOnly": false,
+    "ScriptUload": [
+        ""
+    ],
+    "EventUload": [
+        "",
+        ""
+    ],
+    "DATABASE": {
+        "type": "sqlite",
+        "uriMongodb": "",
+        "autoSyncWhenStart": false,
+        "autoRefreshThreadInfoFirstTime": true
+    },
+    "DESIGN": {
+        "Theme": "Ghost",
+        "Setup": {
+            "Theme": "Aqua, Fiery, Blue, Pink, Red, Retro, Sunlight, Teen, Summer, Flower, Ghost, Hacker"
+        }
+    },
+    "EMAIL": "",
+    "PASSWORD": "",
+    "OTPKEY": "",
+    "BOTNAME": "𓆩𝐍𝐄𝐑𝐎𓆪",
+    "PREFIX": "",
+    "ADMINBOT": [
+        "61557506697779",
+        "100034144836882"
+    ],
+    "SUPPORT": [
+        ""
+    ],
+    "STATEPATH": "Config/State.json",
+    "version": "1.0.0",
+    "restartListenMqtt": {
+        "enable": true,
+        "timeRestart": 3600000
+    },
+    "adminUpdate": {
+        "sendNoti": true
+    }
+}
